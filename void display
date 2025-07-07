@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std ;
+#define size 6
+int stack [size];
+int top =-1;
+void push (int value){
+  if (top==size-1){
+      cout<<"stack overflow"<<endl;
+  } else {
+      top++;
+      stack[top] = value;
+  }
+}
+      
+ void display (){
+  if (top==-1){
+   cout<<"stack is empty"<<endl;
+  }  
+  else{
+      for (int i=top; i>=0;i--){
+      cout<<stack [i]<<endl;
+      }
+  }
+}
+
+
+int main() {
+     push(10);
+     push(5);
+     push(6);
+     push(8);
+     push(9);
+     push(3); 
+     push(2);
+     display ();
+     return 0;
+ }
